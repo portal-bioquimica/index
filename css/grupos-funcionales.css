@@ -1,0 +1,1002 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0px;
+    clear: both;
+}
+
+/***** Font *****/
+
+@font-face {
+    font-family: 'sf_cartoonist_handregular';
+    src: url('../fonts/SF_Cartoonist_Hand-webfont.eot');
+    src: url('../fonts/SF_Cartoonist_Hand-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/SF_Cartoonist_Hand-webfont.woff') format('woff'), url('../fonts/SF_Cartoonist_Hand-webfont.ttf') format('truetype'), url('../fonts/SF_Cartoonist_Hand-webfont.svg#sf_cartoonist_handregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    font-family: "sf_cartoonist_handregular", Arial, Helvetica, sans-serif;
+    font-size: 1.13em;
+    letter-spacing: 0.6px;
+    padding-bottom: 8px;
+    width: 236px;
+}
+
+h2, h3 {
+    font-family: "sf_cartoonist_handregular", Arial, Helvetica, sans-serif;
+    font-size: 1.6em;
+    text-align: center;
+    color: #333333;
+    text-transform: uppercase;
+    margin: 0.5em 0;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 1.2em;
+    text-align: left;
+    text-transform: none;
+    float: left;
+}
+
+a {
+    outline: medium none;
+    text-decoration: none;
+    font-family: "sf_cartoonist_handregular", Arial, Helvetica, sans-serif;
+}
+.visor {
+    height: 500px;
+    width: 720px;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px #999;
+}
+
+.contenedor-slides {
+    /*    height: 500px;
+     width: 1440px;*/
+    background: url("../img/fondo1.jpg") no-repeat;
+    position: relative;
+}
+
+.slide {
+    width: 720px;
+    height: 500px;
+}
+
+.btn-texto {
+    background-color: #FF0000;
+    height: 24px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 32px;
+}
+
+.contenedor-texto {
+    height: 80%;
+    margin: auto;
+    width: 440px;
+    margin-top: 77px;
+    position: relative;
+}
+
+.contenedor-texto > p {
+    margin: auto;
+    width: 90%;
+}
+
+.texto-intro {
+    text-align: center;
+}
+
+.texto-intro:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: url("../img/fondo-intro.png") no-repeat;
+    width: 429px;
+    height: 478px;
+    top: -62px;
+    z-index: -1;
+}
+
+.ventana.definicion {
+    background-color: #FDC953;
+    border: 3px solid #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px #666666;
+    left: 0;
+    right: 0;
+    margin: auto;
+    line-height: 1;
+    padding: 6px;
+    position: absolute;
+    top: 182px;
+    width: 240px;
+}
+
+.ventana.definicion:after {
+    border-color: #FDC953 transparent transparent transparent;
+    content: '';
+    display: block;
+    border-style: solid;
+    border-width: 18px;
+    position: absolute;
+    bottom: -36px;
+    right: 99px;
+}
+
+.next {
+    display: block;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+    width: 50px;
+    z-index: 6;
+}
+.prev {
+    left: 0;
+    position: absolute;
+    top: 100px;
+    z-index: 6;
+}
+
+/********* Botones **********/
+
+.btn-definicion {
+    color: #f2401c;
+    font-weight: bold;
+}
+
+.btn-siguiente {
+    text-indent: -4000px;
+    background: url("../img/siguiente.png") no-repeat;
+    display: block;
+    width: 38px;
+    height: 42px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.btn-siguiente:hover {
+    background: url("../img/siguiente_over.png") no-repeat;
+}
+
+.btn-cerrar {
+    position: absolute;
+    color: #fff;
+    right: -16px;
+    top: -16px;
+    display: block;
+    background-color: #FDC953;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.btn-repetir {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    text-indent:-5000px;
+    color:#FFF;
+    background: url("../img/btn_repetir.png") no-repeat;
+    display:block;
+    width:37px;
+    height:37px;
+}
+.btn-repetir:hover { 
+    background: url("../img/btn_repetir_over.png") no-repeat;
+}
+
+.btn-cerrar:hover {
+    color: #333;
+}
+
+/****** GRUPOS FUNCIONALES ******/
+
+.titulo {
+    height: 36px;
+}
+
+.titulo .btn-anterior {
+    text-indent: -4000px;
+    display: inline-block;
+    width: 52px;
+    height: 36px;
+    float: left;
+    margin: 0 3px 0 0;
+    background: url("../img/btn_anterior.png") no-repeat;
+    line-height: 36px;
+}
+
+.titulo .btn-anterior:hover {
+    background: url("../img/btn_anterior-over.png") no-repeat;
+}
+
+.titulo h3 {
+    background-color: #c9eec3;
+    height: 36px;
+    margin: 0;
+    display: inline-block;
+    line-height: 34px;
+    padding: 0 30px;
+    position: relative;
+}
+
+.titulo h3:before, .titulo h3:after {
+    content: '';
+    display: block;
+    background-color: #c9eec3;
+    height: 36px;
+    transform: skew(-26deg, 0deg);
+    -webkit-transform: skew(-26deg, 0deg); /* Safari and Chrome */
+    position: absolute;
+    top: 0;
+    width: 30px;
+}
+
+.titulo h3:before {
+    left: -8px;
+}
+
+.titulo h3:after {
+    right: -12px;
+}
+
+/*********** Tabs *************/
+
+.contenedor-tabs {
+    width: 700px;
+    margin: 10px 0 0 7px;
+}
+
+.tabs > ul a {
+    background: url("../img/img_tabs.png") no-repeat;
+    width: 92px;
+    height: 42px;
+    color: #FFF;
+    text-align: center;
+    line-height: 52px;
+    font-size: 1.1em;
+    letter-spacing: 0.6px;
+    font-weight: bold;
+}
+
+.tab {
+    position: relative;
+    height: 390px;
+}
+
+li.ui-tabs-active a {
+    background: url("../img/img_tabs_over.png") no-repeat;
+    color: #333;
+}
+
+.ui-tabs .ui-tabs-nav {
+    margin-left: 15px;
+}
+.ui-tabs .ui-tabs-panel {
+    background-color: rgba(255,255,255,0.5);
+    border: 3px solid #ccc;
+    border-radius: 16px;
+}
+.tab > .texto {
+    font-family: "sf_cartoonist_handregular",Arial,Helvetica,sans-serif;
+    margin-top: 9px;
+    position: relative;
+    width: 300px;
+    /*height: 140px;*/
+}
+
+.tab > .texto p {
+    margin: -34px 0 0 43px;}
+
+.contenedor-tabs .formula{
+    color: #444444;
+    display: inline-block;
+    font-family: "sf_cartoonist_handregular",Arial,Helvetica,sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: auto;
+    text-align: center;
+}
+
+.resaltar-color{
+    color:#F2401C;
+}
+
+.resaltar{
+    font-weight:bold;
+}
+
+.contenedor-tabs .acido {
+    line-height: 16px;
+    padding-top: 7px;
+    height: 35px;
+}
+
+.contenedor-figura {
+    border-radius: 12px;
+    height: 380px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+}
+.contenedor-figura .figura > div {
+    position: absolute;
+}
+.contenedor-figura .figura {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/***** Numeracion ******/
+.contenedor-tabs .numeracion {
+    background: url("../img/numeracion.png") no-repeat;
+    color: #FFF;
+    display:inline-block;
+    width: 36px;
+    height:40px;
+    text-align:center;
+    font-weight:bold;
+    font-size:1.5em;
+    line-height:1.7em;
+}
+
+/*********** moleculas *************/
+
+.alcohol .figura {
+    /*background-color: #EEEEEE;*/
+    height: 232px;
+    width: 165px;
+}
+/*hidrogeno*/
+.alcohol .e-0 {
+    right: 0;
+    top: 0;
+    width: 59px;
+    height: 38px;
+    background: url("../img/moleculas/alcohol/alcohol.png") no-repeat -0px -111px;
+    transform: translate(23px, -16px) rotate(-143deg);
+    -ms-transform: translate(23px, -16px) rotate(-143deg); /* IE 9 */
+    -webkit-transform: translate(23px, -16px) rotate(-143deg); /* Safari and Chrome */
+}
+/*oxigeno*/
+.alcohol .e-1 {
+    left: 46px;
+    top: 19px;
+    width: 68px;
+    height: 75px;
+    background: url("../img/moleculas/alcohol/alcohol.png") no-repeat -100px -0px;
+    z-index: 1;
+    transform: translate(-39px, -30px) rotate(188deg);
+    -ms-transform: translate(-39px, -30px) rotate(188deg); /* IE 9 */
+    -webkit-transform: translate(-39px, -30px) rotate(188deg); /* Safari and Chrome */
+}
+/*carbono*/
+.alcohol .e-2 {
+    width: 100px;
+    height: 111px;
+    background: url("../img/moleculas/alcohol/alcohol.png") no-repeat -0px -0px;
+    left: 22.5px;
+    top: 88px;
+    transform: translate(20px, 25px) rotate(34deg);
+    -ms-transform: translate(20px, 25px) rotate(34deg); /* IE 9 */
+    -webkit-transform: translate(20px, 25px) rotate(34deg); /* Safari and Chrome */
+}
+/*hidrogeno3*/
+.alcohol .e-3 {
+    bottom: 28px;
+    right: 19px;
+    width: 45px;
+    height: 40px;
+    background: url("../img/moleculas/alcohol/alcohol.png") no-repeat -59px -111px;
+    transform: translate(34px, 62px) rotate(-188deg);
+    -ms-transform: translate(34px, 62px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(34px, 62px) rotate(-188deg); /* Safari and Chrome */
+}
+/*hidrogeno2*/
+.alcohol .e-4 {
+    bottom: 4px;
+    left: 39.5px;
+    width: 38px;
+    height: 53px;
+    background: url("../img/moleculas/alcohol/alcohol.png") no-repeat -104px -115px;
+    transform: translate(29px, 51px) rotate(188deg);
+    -ms-transform: translate(29px, 51px) rotate(188deg); /* IE 9 */
+    -webkit-transform: translate(29px, 51px) rotate(188deg); /* Safari and Chrome */
+}
+/*hidrogeno1*/
+.alcohol .e-5 {
+    bottom: 29px;
+    left: 1px;
+    width: 42px;
+    height: 40px;
+    background: url("../img/moleculas/alcohol/alcohol.png") no-repeat -104px -75px;
+    transform: translate(16px, 56px) rotate(-143deg);
+    -ms-transform: translate(16px, 56px) rotate(-143deg); /* IE 9 */
+    -webkit-transform: translate(16px, 56px) rotate(-143deg); /* Safari and Chrome */
+}
+
+.aldehido .figura {
+    /*background-color: #EEEEEE;*/
+    height: 234px;
+    width: 229px;
+}
+/*carbono*/
+.aldehido .e-0 {
+    left: 55px;
+    top: 87px;
+    width: 127px;
+    height: 99px;
+    background: url("../img/moleculas/aldehido/aldehido.png") no-repeat -0px -0px;
+}
+/*h02*/
+.aldehido .e-1 {
+   left: 81px;
+    top: 0px;
+    width:74px;
+    height:91px;
+    background: url("../img/moleculas/aldehido/aldehido.png") no-repeat -0px -99px;
+    transform: rotate(-188deg);
+    -ms-transform: rotate(-188deg); /* IE 9 */
+    -webkit-transform: rotate(-188deg); /* Safari and Chrome */
+}
+/*oxigeno*/
+.aldehido .e-2 {
+     width:69px;
+    height:56px;
+    background: url("../img/moleculas/aldehido/aldehido.png") no-repeat -127px -0px;
+    left: 159px;
+    top: 168px;
+    transform: translate(36px, -30px) rotate(188deg);
+    -ms-transform: translate(36px, -30px) rotate(188deg); /* IE 9 */
+    -webkit-transform: translate(36px, -30px) rotate(188deg); /* Safari and Chrome */
+}
+/*h01*/
+.aldehido .e-3 {
+    width:73px;
+    height:55px;
+    background: url("../img/moleculas/aldehido/aldehido.png") no-repeat -74px -99px;;
+    left: 4px;
+    top: 168px;
+    transform: translate(-39px, -30px) rotate(188deg);
+    -ms-transform: translate(-39px, -30px) rotate(188deg); /* IE 9 */
+    -webkit-transform: translate(-39px, -30px) rotate(188deg); /* Safari and Chrome */
+}
+
+.cetona .figura {
+    height: 233px;
+    width: 312px;
+}
+/*carbono central*/
+.cetona .e-0 {
+    left: 104.3px;
+    top: 71.4px;
+    width:105px;
+    height:82px;
+    background: url("../img/moleculas/cetona/cetona.png") no-repeat -0px -0px;;
+}
+/*oxigeno*/
+.cetona .e-1 {
+    width:62px;
+    height:75px;
+    background: url("../img/moleculas/cetona/cetona.png") no-repeat -71px -82px;
+    left: 125.8px;
+    top: 0;
+    transform: translate(36px, -30px) rotate(188deg);
+    -ms-transform: translate(36px, -30px) rotate(188deg); /* IE 9 */
+    -webkit-transform: translate(36px, -30px) rotate(188deg); /* Safari and Chrome */
+}
+/*carbono izq*/
+.cetona .e-2 {
+    left: 195.6px;
+    top: 125.8px;
+    width:71px;
+    height:64px;
+    background: url("../img/moleculas/cetona/cetona.png") no-repeat -0px -149px;
+    transform: translate(70px, -30px) rotate(188deg);
+    -ms-transform: translate(70px, -30px) rotate(188deg); /* IE 9 */
+    -webkit-transform: translate(70px, -30px) rotate(188deg); /* Safari and Chrome */
+    z-index: 1;
+}
+/*carbono der*/
+.cetona .e-3 {
+    left: 46.4px;
+    top: 128.3px;
+    width:71px;
+    height:67px;
+    background: url("../img/moleculas/cetona/cetona.png") no-repeat -0px -82px;
+    transform: translate(-44px, -30px) rotate(188deg);
+    -ms-transform: translate(-44px, -30px) rotate(188deg); /* IE 9 */
+    -webkit-transform: translate(-44px, -30px) rotate(188deg); /* Safari and Chrome */
+    z-index: 1;
+}
+/*h01*/
+.cetona .e-4 {
+    width:56px;
+    height:45px;
+    background: url("../img/moleculas/cetona/cetona.png") no-repeat -105px -0px;
+    left: 0;
+    top: 97px;
+    transform: translate(-30px, -35px) rotate(188deg);
+    -ms-transform: translate(-30px, -35px) rotate(188deg); /* IE 9 */
+    -webkit-transform: translate(-30px, -35px) rotate(188deg); /* Safari and Chrome */
+}
+/*h02*/
+.cetona .e-5 {
+    left: 57.5px;
+    top: 81.2px;
+    width:45px;height:73px;background: url("../img/moleculas/cetona/cetona.png") no-repeat -187px -0px;;
+    transform: translate(-28px, -59px) rotate(188deg);
+    -ms-transform: translate(-28px, -59px) rotate(188deg); /* IE 9 */
+    -webkit-transform: translate(-28px, -59px) rotate(188deg); /* Safari and Chrome */
+}
+/*h03*/
+.cetona .e-6 {
+    left: 210px;
+    top: 76.2px;
+    width:45px;
+    height:72px;
+    background: url("../img/moleculas/cetona/cetona.png") no-repeat -181px -93px;
+    transform: translate(38px, -63px) rotate(188deg);
+    -ms-transform: translate(38px, -63px) rotate(188deg); /* IE 9 */
+    -webkit-transform: translate(38px, -63px) rotate(188deg); /* Safari and Chrome */
+}
+/*h04*/
+.cetona .e-7 {
+    left: 256.2px;
+    top: 92px;
+    width:56px;
+    height:45px;
+    background: url("../img/moleculas/cetona/cetona.png") no-repeat -71px -157px;
+    transform: translate(38px, -63px) rotate(188deg);
+    -ms-transform: translate(38px, -63px) rotate(188deg); /* IE 9 */
+    -webkit-transform: translate(38px, -63px) rotate(188deg); /* Safari and Chrome */
+}
+/*h05*/
+.cetona .e-8 {
+    left: 12.1px;
+    top: 185px;
+    width:54px;
+    height:48px;
+    background: url("../img/moleculas/cetona/cetona.png") no-repeat -127px -157px;
+    transform: translate(-22px, 10px) rotate(188deg);
+    -ms-transform: translate(-22px, 10px) rotate(188deg); /* IE 9 */
+    -webkit-transform: translate(-22px, 10px) rotate(188deg); /* Safari and Chrome */
+}
+/*h06*/
+.cetona .e-9 {
+    left: 247px;
+    top: 180px;
+    width:54px;
+    height:48px;
+    background: url("../img/moleculas/cetona/cetona.png") no-repeat -133px -45px;
+    transform: translate(-22px, 10px) rotate(188deg);
+    -ms-transform: translate(-22px, 10px) rotate(188deg); /* IE 9 */
+    -webkit-transform: translate(-22px, 10px) rotate(188deg); /* Safari and Chrome */
+}
+
+.carboxilico .figura {
+    height: 239px;
+    width: 329px;
+}
+.carboxilico .e-0 { /*.carboxilico_ca02{*/
+    top: 71.361px;
+    left: 104.624px;
+    width:97px;
+    height:83px;
+    background: url("../img/moleculas/carboxilico/carboxilico.png") no-repeat -0px -0px;
+    transform: rotate(188deg);
+    -ms-transform: rotate(188deg); /* IE 9 */
+    -webkit-transform: rotate(188deg); /* Safari and Chrome */
+}
+.carboxilico .e-4 { /*.carboxilico_ca01{*/
+    top:132.331px;
+    left:47.124px;
+    width:71px;
+    height:68px;
+    background: url("../img/moleculas/carboxilico/carboxilico.png") no-repeat -95px -83px;
+    z-index: 1;
+    transform: translate(10px, 27px) rotate(105deg);
+    -ms-transform: translate(10px, 27px) rotate(105deg); /* IE 9 */
+    -webkit-transform: translate(10px, 27px) rotate(105deg); /* Safari and Chrome */
+}
+.carboxilico .e-6 {/*.carboxilico_h01{*/
+    top:103.658px;
+    left:0px;
+    width:57px;
+    height:44px;
+    background: url("../img/moleculas/carboxilico/carboxilico.png") no-repeat -0px -151px;
+    transform: translate(0px, 0px) rotate(-100deg);
+    -ms-transform: translate(0px, 0px) rotate(-100deg); /* IE 9 */
+    -webkit-transform: translate(0px, 0px) rotate(-100deg); /* Safari and Chrome */
+}
+.carboxilico .e-5 {/*.carboxilico_h02{*/
+    top:85.489px;
+    left:56.888px;
+    width:44px;
+    height:72px;
+    background: url("../img/moleculas/carboxilico/carboxilico.png") no-repeat -159px -0px;
+    transform: translate(0px, -30px) rotate(154deg);
+    -ms-transform: translate(0px, -30px) rotate(154deg); /* IE 9 */
+    -webkit-transform: translate(0px, -30px) rotate(154deg); /* Safari and Chrome */
+}
+.carboxilico .e-3 {/*.carboxilico_h03{*/
+    top:125.749px;
+    left:274.274px;
+    width:55px;
+    height:40px;
+    background: url("../img/moleculas/carboxilico/carboxilico.png") no-repeat -57px -151px;
+    transform: translate(15px, -10px) rotate(106deg);
+    -ms-transform: translate(15px, -10px) rotate(106deg); /* IE 9 */
+    -webkit-transform: translate(15px, -10px) rotate(106deg); /* Safari and Chrome */
+}
+.carboxilico .e-7 {/*.carboxilico_h04{*/
+    top:190.107px;
+    left:15.766px;
+    width:53px;
+    height:49px;
+    background: url("../img/moleculas/carboxilico/carboxilico.png") no-repeat -112px -151px;
+    transform: translate(0px, 0px) rotate(110deg);
+    -ms-transform: translate(0px, 0px) rotate(110deg); /* IE 9 */
+    -webkit-transform: translate(0px, 0px) rotate(110deg); /* Safari and Chrome */
+}
+.carboxilico .e-1 {/*.carboxilico_ox01*/
+    top:0px;
+    left:122.241px;
+    width:62px;
+    height:77px;
+    background: url("../img/moleculas/carboxilico/carboxilico.png") no-repeat -97px -0px;
+    transform: translate(0, -10px) rotate(-188deg);
+    -ms-transform: translate(0, -10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -10px) rotate(-188deg); /* Safari and Chrome */
+}
+.carboxilico .e-2 {/*.carboxilico_ox02{*/
+    top:129.674px;
+    left:188.64px;
+    width:95px;
+    height:59px;
+    background: url("../img/moleculas/carboxilico/carboxilico.png") no-repeat -0px -83px;
+    z-index: 1;
+    transform: rotate(82deg);
+    -ms-transform: rotate(82deg); /* IE 9 */
+    -webkit-transform: rotate(82deg); /* Safari and Chrome */
+}
+
+.ester .figura {
+    height: 197px;
+    width: 389px;
+}
+.ester .e-3 /*.ester_ca01*/{
+    left:37.143px;
+    top:110.904px;
+    width:63px;
+    height:55px;
+    background: url("../img/moleculas/ester/ester.png") no-repeat -75px -136px;
+    transform: translate(0, 75px) rotate(-188deg);
+    -ms-transform: translate(0, 75px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, 75px) rotate(-188deg); /* Safari and Chrome */
+    z-index: 1
+}
+.ester .e-0 /*.ester_ca02*/{
+    left: 85.452px;
+    top: 61.326px;
+    width:87px;
+    height:71px;
+    background: url("../img/moleculas/ester/ester.png") no-repeat 0 0;
+    transform: translate(0, -10px) rotate(-188deg);
+    -ms-transform: translate(0, -10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -10px) rotate(-188deg); /* Safari and Chrome */
+}
+.ester .e-4 /*.ester_ca03*/{
+    top:66.124px;
+    left:219.442px;
+    width:87px;
+    height:65px;
+    background: url("../img/moleculas/ester/ester.png") no-repeat 0px -71px;
+    transform: translate(0, -89px) rotate(-188deg);
+    -ms-transform: translate(0, -89px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -89px) rotate(-188deg); /* Safari and Chrome */
+    z-index: 1;
+}
+.ester .e-5 /*.ester_ca04*/{
+    top:110.904px;left:290.874px;
+    width:61px;
+    height:56px;
+    background: url("../img/moleculas/ester/ester.png") no-repeat -87px 0px;
+    z-index: 1;
+    transform: translate(0, -106px) rotate(-188deg);
+    -ms-transform: translate(0, -106px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -106px) rotate(-188deg); /* Safari and Chrome */
+}
+.ester .e-6 /*.ester_h01*/{
+    top:90.799px;
+    left:0px;
+    width:45px;
+    height:35px;
+    background: url("../img/moleculas/ester/ester.png") no-repeat 0px -187px;
+    transform: translate(11px, 37px) rotate(-188deg);
+    -ms-transform: translate(11px, 37px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(11px, 37px) rotate(-188deg); /* Safari and Chrome */
+}
+.ester .e-7 /*.ester_h02*/{
+    top:73.852px;
+    left:46.941px;
+    width:35px;
+    height:57px;
+    background: url("../img/moleculas/ester/ester.png") no-repeat -183px -93px;
+    transform: translate(4px, 56px) rotate(-188deg);
+    -ms-transform: translate(4px, 56px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(4px, 56px) rotate(-188deg); /* Safari and Chrome */
+}
+.ester .e-8 /*.ester_h03*/{
+    top:30.011px;
+    left:229.467px;
+    width:36px;
+    height:47px;
+    background: url("../img/moleculas/ester/ester.png") no-repeat -148px 0px;
+    transform: translate(0, -94px) rotate(-188deg);
+    -ms-transform: translate(0, -94px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -94px) rotate(-188deg); /* Safari and Chrome */
+}
+.ester .e-9 /*.ester_h04*/{
+    top:28.842px;
+    left:277.055px;
+    width:35px;
+    height:46px;
+    background: url("../img/moleculas/ester/ester.png") no-repeat -183px -47px;
+    transform: translate(0, -93px) rotate(-188deg);
+    -ms-transform: translate(0, -93px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -93px) rotate(-188deg); /* Safari and Chrome */
+}
+.ester .e-10 /*.ester_h05*/{
+    top:73.852px;
+    left:306.601px;
+    width:36px;
+    height:57px;
+    background: url("../img/moleculas/ester/ester.png") no-repeat -180px -157px;
+    transform: translate(0, -127px) rotate(-188deg);
+    -ms-transform: translate(0, -127px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -127px) rotate(-188deg); /* Safari and Chrome */
+}
+.ester .e-11 /*.ester_h06*/{
+    top:90.799px;
+    left:344.147px;
+    width:45px;
+    height:35px;
+    background: url("../img/moleculas/ester/ester.png") no-repeat -138px -122px;
+    transform: translate(0, -110px) rotate(-188deg);
+    -ms-transform: translate(0, -110px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -110px) rotate(-188deg); /* Safari and Chrome */
+}
+.ester .e-12 /*.ester_h07*/{
+    top:157.886px;
+    left:7.699px;
+    width:42px;
+    height:40px;
+    background: url("../img/moleculas/ester/ester.png") no-repeat -141px -56px;
+    transform: translate(0, 7px) rotate(-188deg);
+    -ms-transform: translate(0, 7px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, 7px) rotate(-188deg); /* Safari and Chrome */
+}
+.ester .e-13 /*.ester_h08*/{
+    top:157.886px;
+    left:339.905px;
+    width:42px;
+    height:39px;
+    background: url("../img/moleculas/ester/ester.png") no-repeat -138px -157px;
+    transform: translate(0, -111px) rotate(-188deg);
+    -ms-transform: translate(0, -111px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -111px) rotate(-188deg); /* Safari and Chrome */
+}
+.ester .e-1/*.ester_ox01*/{
+    top:0px;
+    left:104.008px;
+    width:54px;
+    height:66px;
+    background: url("../img/moleculas/ester/ester.png") no-repeat -87px -56px;
+    transform: translate(0, -10px) rotate(-188deg);
+    -ms-transform: translate(0, -10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -10px) rotate(-188deg); /* Safari and Chrome */
+}
+.ester .e-2 /*.ester_ox02*/{
+    top:111.438px;
+    left:161.07px;
+    width:75px;
+    height:51px;
+    background: url("../img/moleculas/ester/ester.png") no-repeat 0px -136px;
+    transform: translate(0, -10px) rotate(-188deg);
+    -ms-transform: translate(0, -10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -10px) rotate(-188deg); /* Safari and Chrome */
+    z-index: 2;
+}
+
+.amino .figura {
+    height: 252px;
+    width: 342px;
+}
+.amino .e-6 /*.amino_ca*/{
+    top:49.175px;
+    left:58.543px;
+    width:110px;
+    height:79px;
+    background: url("../img/moleculas/amino/amina.png") no-repeat -0px -105px;
+    transform: translate(0, -10px) rotate(-188deg);
+    -ms-transform: translate(0, -10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -10px) rotate(-188deg); /* Safari and Chrome */
+}
+.amino .e-5 /*.amino_h01*/{
+    top:0px;
+    left:21.966px;
+    width:60px;
+    height:61px;
+    background: url("../img/moleculas/amino/amina.png") no-repeat -136px -0px;
+    transform: translate(0, -10px) rotate(-188deg);
+    -ms-transform: translate(0, -10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -10px) rotate(-188deg); /* Safari and Chrome */
+}
+.amino .e-1 /*.amino_h02*/{
+    top:71.467px;
+    left:272.541px;
+    width:69px;
+    height:52px;
+    background: url("../img/moleculas/amino/amina.png") no-repeat -110px -157px;
+    transform: translate(0, -10px) rotate(-188deg);
+    -ms-transform: translate(0, -10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -10px) rotate(-188deg); /* Safari and Chrome */
+}
+.amino .e-4 /*.amino_h03*/{
+    top:99.12px;
+    left:0px;
+    width:69px;
+    height:52px;
+    background: url("../img/moleculas/amino/amina.png") no-repeat -110px -105px;
+    transform: translate(0, -10px) rotate(-188deg);
+    -ms-transform: translate(0, -10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -10px) rotate(-188deg); /* Safari and Chrome */
+}
+.amino .e-3 /*.amino_h04*/{
+    top:105.693px;
+    left:67.517px;
+    width:53px;
+    height:84px;
+    background: url("../img/moleculas/amino/amina.png") no-repeat -179px -61px;
+    transform: translate(0, -10px) rotate(-188deg);
+    -ms-transform: translate(0, -10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -10px) rotate(-188deg); /* Safari and Chrome */
+}
+.amino .e-2 /*.amino_h05*/{
+    top:188.868px;
+    left:199.817px;
+    width:46px;
+    height:63px;
+    background: url("../img/moleculas/amino/amina.png") no-repeat -179px -145px;
+    transform: translate(0, 10px) rotate(-188deg);
+    -ms-transform: translate(0, 10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, 10px) rotate(-188deg); /* Safari and Chrome */
+}
+.amino .e-0 /*.amino_ni*/{
+    top:94.654px;
+    left:156.505px;
+    width:136px;
+    height:105px;
+    background: url("../img/moleculas/amino/amina.png") no-repeat -0px -0px;
+    transform: translate(0, -10px) rotate(-188deg);
+    -ms-transform: translate(0, -10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -10px) rotate(-188deg); /* Safari and Chrome */
+}
+
+.amida .figura {
+    height: 237px;
+    width: 294px;
+}
+.amida .e-0 /*.amida_ca*/{
+    top:61.49px;
+    left:106.615px;
+    width:81px;
+    height:68px;
+    background: url("../img/moleculas/amida/amida.png") no-repeat -85px -0px;
+    transform: translate(0, -10px) rotate(-188deg);
+    -ms-transform: translate(0, -10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -10px) rotate(-188deg); /* Safari and Chrome */
+}
+.amida .e-6 /*.amida_h01*/{
+    top:78.773px;
+    left:0px;
+    width:42px;
+    height:41px;
+    background: url("../img/moleculas/amida/amida.png") no-repeat -128px -135px;
+    transform: translate(0, -10px) rotate(-188deg);
+    -ms-transform: translate(0, -10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -10px) rotate(-188deg); /* Safari and Chrome */
+}
+.amida .e-7 /*.amida_h02*/{
+    top:78.773px;
+    left:253.045px;
+    width:43px;
+    height:41px;
+    background: url("../img/moleculas/amida/amida.png") no-repeat -85px -135px;
+    transform: translate(0, -90px) rotate(-188deg);
+    -ms-transform: translate(0, -90px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -90px) rotate(-188deg); /* Safari and Chrome */
+}
+.amida .e-4 /*.amida_h03*/{
+    z-index: 1;
+    top:188.808px;
+    left:63.349px;
+    width:36px;
+    height:49px;
+    background: url("../img/moleculas/amida/amida.png") no-repeat -166px -0px;
+    transform: translate(0, 10px) rotate(-188deg);
+    -ms-transform: translate(0, 10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, 10px) rotate(-188deg); /* Safari and Chrome */
+}
+.amida .e-3 /*.amida_h04*/{
+    top:188.808px;
+    left:193.979px;
+    width:37px;
+    height:49px;
+    background: url("../img/moleculas/amida/amida.png") no-repeat -139px -68px;
+    transform: translate(0, 10px) rotate(-188deg);
+    -ms-transform: translate(0, 10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, 10px) rotate(-188deg); /* Safari and Chrome */
+}
+.amida .e-5 /*.amida_ni01*/{
+    top:107.882px;
+    left:30.27px;
+    width:85px;
+    height:92px;
+    background: url("../img/moleculas/amida/amida.png") no-repeat -0px -0px;
+    transform: translate(-26px, 1px) rotate(-188deg);
+    -ms-transform: translate(-26px, 1px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(-26px, 1px) rotate(-188deg); /* Safari and Chrome */
+}
+.amida .e-1 /*.amida_ni02*/{
+    top:107.882px;
+    left:179.001px;
+    width:85px;
+    height:92px;
+    background: url("../img/moleculas/amida/amida.png") no-repeat -0px -92px;
+    transform: translate(0, -10px) rotate(-188deg);
+    -ms-transform: translate(0, -10px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -10px) rotate(-188deg); /* Safari and Chrome */
+}
+.amida .e-2 /*.amida_ox*/{
+    top:0px;
+    left:119.547px;
+    width:54px;
+    height:67px;
+    background: url("../img/moleculas/amida/amida.png") no-repeat -85px -68px;
+    transform: translate(0, -30px) rotate(-188deg);
+    -ms-transform: translate(0, -30px) rotate(-188deg); /* IE 9 */
+    -webkit-transform: translate(0, -30px) rotate(-188deg); /* Safari and Chrome */
+}
+
+
+/* nuevo Marce */
+.imagen {
+    display: inline-block;
+    margin-left: 43px;
+    vertical-align: middle;
+}
+
+.ester .formula {
+    margin-left: 70px;
+}
